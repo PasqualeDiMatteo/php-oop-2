@@ -36,7 +36,7 @@ class ECommerce
     public function setProducts(array $products)
     {
         if (!$products) return;
-        $this->products = $products;
+        return $this->products = $products;
     }
 }
 

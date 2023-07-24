@@ -22,7 +22,7 @@ class Accessory extends Product
     public function setMaterial($material)
     {
         if (!strlen($material)) return;
-        else $this->material = $material;
+        return $this->material = $material;
     }
 
     public function getSize()
@@ -33,7 +33,7 @@ class Accessory extends Product
     public function setSize($size)
     {
         if (!strlen($size)) return "ND";
-        else $this->size = $size;
+        return $this->size = $size;
     }
 }
 

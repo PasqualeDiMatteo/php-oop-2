@@ -26,7 +26,7 @@ class Food extends Product
     public function setIngredients(array $ingredients)
     {
         if (!count($ingredients)) return;
-        else $this->ingredients = $ingredients;
+        return $this->ingredients = $ingredients;
     }
 
     public function getWeight()
@@ -37,7 +37,7 @@ class Food extends Product
     public function setWeight(int $weight)
     {
         if (!is_numeric($weight) || $weight < 0) return;
-        else $this->weight = $weight;
+        return $this->weight = $weight;
     }
 }
 

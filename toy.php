@@ -22,7 +22,7 @@ class Toy extends Product
     public function setCharacteristics($characteristics)
     {
         if (!strlen($characteristics)) return;
-        $this->characteristics = $characteristics;
+        return $this->characteristics = $characteristics;
     }
 
     public function getSize()
@@ -33,7 +33,7 @@ class Toy extends Product
     public function setSize($size)
     {
         if (!strlen($size)) return "ND";
-        $this->size = $size;
+        return $this->size = $size;
     }
 }
 
