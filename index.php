@@ -1,4 +1,7 @@
-<?php ?>
+<?php
+require_once __DIR__ . "/e-commerce.php"
+
+?>
 
 <!DOCTYPE html>
 <html lang="en">
@@ -13,7 +16,7 @@
 <body>
     <div class="container">
         <header>
-            <h1>Boolshop</h1>
+            <h1><?= $e_commerce->getTitle() ?></h1>
         </header>
     </div>
 
