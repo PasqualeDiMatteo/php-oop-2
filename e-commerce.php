@@ -1,4 +1,5 @@
 <?php
+require_once __DIR__ . "/product.php";
 class ECommerce
 {
     protected $title;
@@ -21,6 +22,11 @@ class ECommerce
         return $this->title = $title;
     }
 
+    public function getProducts()
+    {
+        return $this->products;
+    }
+
     public function setProducts(array $products)
     {
         if (!$products) return;
@@ -28,4 +34,4 @@ class ECommerce
     }
 }
 
-$e_commerce = new ECommerce("Boolshop", ["cane", "gatto"]);
+$e_commerce = new ECommerce("Boolshop", [$first_product, $second_product, $third_product]);

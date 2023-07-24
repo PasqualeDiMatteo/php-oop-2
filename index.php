@@ -1,6 +1,6 @@
 <?php
-require_once __DIR__ . "/e-commerce.php"
-
+require_once __DIR__ . "/e-commerce.php";
+require_once __DIR__ . "/product.php";
 ?>
 
 <!DOCTYPE html>
@@ -18,6 +18,19 @@ require_once __DIR__ . "/e-commerce.php"
         <header>
             <h1><?= $e_commerce->getTitle() ?></h1>
         </header>
+        <div class="container">
+            <div class="row">
+                <?php foreach ($e_commerce->getProducts() as $product) : ?>
+                    <div class="col">
+                        <div class="card mb-5 bg-light">
+                            <img src="<?= $product->getImage() ?>" alt="<?= $product->getTitle() ?>">
+                            <h3><?= $product->getTitle() ?></h3>
+                            <p><?= $product->getPrice() ?></p>
+                        </div>
+                    </div>
+                <?php endforeach ?>
+            </div>
+        </div>
     </div>
 
 </body>
