@@ -2,9 +2,7 @@
 require_once __DIR__ . "/e-commerce.php";
 require_once __DIR__ . "/product.php";
 require_once __DIR__ . "/food.php";
-
-
-
+require_once __DIR__ . "/accessory.php";
 var_dump($e_commerce)
 ?>
 
@@ -31,8 +29,16 @@ var_dump($e_commerce)
                             <img src="<?= $product->getImage() ?>" alt="<?= $product->getTitle() ?>">
                             <h3><?= $product->getTitle() ?></h3>
                             <p><?= $product->getPrice() ?></p>
-                            <p><?= $product->getWeight() ?></p>
-                            <p><?= $product->getIngredients() ?></p>
+                            <!-- Se è cibo -->
+                            <?php if ($product instanceof Food) : ?>
+                                <p><?= $product->getWeight() ?></p>
+                                <p><?= $product->getIngredients() ?></p>
+                            <?php endif ?>
+                            <!-- Se è un accessorio -->
+                            <?php if ($product instanceof Accessory) : ?>
+                                <p><?= $product->getMaterial() ?></p>
+                                <p><?= $product->getSize() ?></p>
+                            <?php endif ?>
                         </div>
                     </div>
                 <?php endforeach ?>
