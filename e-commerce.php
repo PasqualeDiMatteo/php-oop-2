@@ -2,6 +2,7 @@
 require_once __DIR__ . "/product.php";
 require_once __DIR__ . "/food.php";
 require_once __DIR__ . "/accessory.php";
+require_once __DIR__ . "/toy.php";
 
 
 
@@ -39,4 +40,4 @@ class ECommerce
     }
 }
 
-$e_commerce = new ECommerce("Boolshop", [$first_product, $second_product, $third_product, $fourth_product, $fifth_product, $sixth_product]);
+$e_commerce = new ECommerce("Boolshop", [$first_product, $second_product, $third_product, $fourth_product, $fifth_product, $sixth_product, $seventh_product, $eighth_product]);

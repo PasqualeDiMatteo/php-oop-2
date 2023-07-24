@@ -3,7 +3,6 @@ require_once __DIR__ . "/e-commerce.php";
 require_once __DIR__ . "/product.php";
 require_once __DIR__ . "/food.php";
 require_once __DIR__ . "/accessory.php";
-var_dump($e_commerce)
 ?>
 
 <!DOCTYPE html>
@@ -22,10 +21,10 @@ var_dump($e_commerce)
             <h1><?= $e_commerce->getTitle() ?></h1>
         </header>
         <div class="container">
-            <div class=" row row-cols-3">
+            <div class=" row row-cols-3 g-4">
                 <?php foreach ($e_commerce->getProducts() as $product) : ?>
                     <div class="col">
-                        <div class="card mb-5 bg-light">
+                        <div class="card mb-5 bg-light h-100">
                             <img src="<?= $product->getImage() ?>" alt="<?= $product->getTitle() ?>">
                             <h3><?= $product->getTitle() ?></h3>
                             <p><?= $product->getPrice() ?></p>
@@ -37,6 +36,11 @@ var_dump($e_commerce)
                             <!-- Se è un accessorio -->
                             <?php if ($product instanceof Accessory) : ?>
                                 <p><?= $product->getMaterial() ?></p>
+                                <p><?= $product->getSize() ?></p>
+                            <?php endif ?>
+                            <!-- Se è un Gioco -->
+                            <?php if ($product instanceof Toy) : ?>
+                                <p><?= $product->getCharacteristics() ?></p>
                                 <p><?= $product->getSize() ?></p>
                             <?php endif ?>
                         </div>
