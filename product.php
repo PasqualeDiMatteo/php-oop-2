@@ -36,7 +36,7 @@ class Product
 
     public function getPrice()
     {
-        return $this->price;
+        return 'Prezzo : ' . '€ ' . $this->price;
     }
 
     public function setPrice($price)
@@ -45,7 +45,3 @@ class Product
         else $this->price = $price;
     }
 }
-
-$first_product = new Product('Royal Canin Mini Adult', 'https://arcaplanet.vtexassets.com/arquivos/ids/243820/royal-canin-size-cane-mini-adult.jpg', 99);
-$second_product = new Product('Almo Nature Holistic Maintenance Medium Large Tonno e Riso', 'https://arcaplanet.vtexassets.com/arquivos/ids/245173/almo-nature-holistic-cane-adult-medium-pollo-e-riso.jpg', 78);
-$third_product = new Product('Almo Nature Cat Daily Lattina', 'https://arcaplanet.vtexassets.com/arquivos/ids/245336/almo-daily-menu-cat-400-gr-vitello.jpg', 44);
