@@ -17,6 +17,8 @@ class ECommerce
         $this->setProducts($products);
     }
 
+    // Title
+
     public function getTitle()
     {
         return $this->title;
@@ -27,6 +29,8 @@ class ECommerce
         if (!strlen($title)) return;
         return $this->title = $title;
     }
+
+    // Products
 
     public function getProducts()
     {

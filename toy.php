@@ -14,6 +14,7 @@ class Toy extends Product
         $this->setSize($size);
     }
 
+    // Characteristics
     public function getCharacteristics()
     {
         return 'Caratteristiche: ' . $this->characteristics;
@@ -24,6 +25,8 @@ class Toy extends Product
         if (!strlen($characteristics)) return;
         return $this->characteristics = $characteristics;
     }
+
+    // Size
 
     public function getSize()
     {

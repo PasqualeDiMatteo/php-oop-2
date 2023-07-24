@@ -14,6 +14,8 @@ class Accessory extends Product
         $this->setSize($size);
     }
 
+    // Material
+
     public function getMaterial()
     {
         return 'Materiale: ' . $this->material;
@@ -24,6 +26,8 @@ class Accessory extends Product
         if (!strlen($material)) return;
         return $this->material = $material;
     }
+
+    // Size
 
     public function getSize()
     {

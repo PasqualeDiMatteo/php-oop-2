@@ -14,6 +14,8 @@ class Product
         $this->setPrice($price);
     }
 
+    // Type
+
     public function getType()
     {
         return $this->type;
@@ -24,6 +26,8 @@ class Product
         if (!strlen($type) && ($type === 'Cane' || $type === 'Gatto' || $type === 'Pesce' || $type === 'Ucello')) return;
         return $this->type = $type;
     }
+
+    // Title
 
     public function getTitle()
     {
@@ -36,6 +40,8 @@ class Product
         return $this->title = $title;
     }
 
+    // Image
+
     public function getImage()
     {
         return $this->image;
@@ -46,6 +52,8 @@ class Product
         if (!$image) return;
         return $this->image = $image;
     }
+
+    // Price
 
     public function getPrice()
     {

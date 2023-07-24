@@ -14,6 +14,8 @@ class Food extends Product
         $this->setWeight($weight);
     }
 
+    // Ingredients
+
     public function getIngredients()
     {
         $ing_list = '';
@@ -28,6 +30,8 @@ class Food extends Product
         if (!count($ingredients)) return;
         return $this->ingredients = $ingredients;
     }
+
+    // Weight
 
     public function getWeight()
     {
