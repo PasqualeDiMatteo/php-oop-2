@@ -18,15 +18,16 @@ require_once __DIR__ . "/accessory.php";
 <body>
     <div class="container">
         <header>
-            <h1><?= $e_commerce->getTitle() ?></h1>
+            <h1 class="my-4"><?= $e_commerce->getTitle() ?></h1>
         </header>
         <div class="container">
             <div class=" row row-cols-3 g-4">
                 <?php foreach ($e_commerce->getProducts() as $product) : ?>
                     <div class="col">
-                        <div class="card mb-5 bg-light h-100">
+                        <div class="card mb-3 bg-light h-100">
                             <img src="<?= $product->getImage() ?>" alt="<?= $product->getTitle() ?>">
                             <h3><?= $product->getTitle() ?></h3>
+                            <p><?= $product->getType() ?></p>
                             <p><?= $product->getPrice() ?></p>
                             <!-- Se è cibo -->
                             <?php if ($product instanceof Food) : ?>

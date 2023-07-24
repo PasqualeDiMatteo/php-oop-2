@@ -7,9 +7,9 @@ class Food extends Product
     protected $ingredients;
     protected $weight;
 
-    public function __construct($title, $image, $price, $ingredients, $weight)
+    public function __construct($type, $title, $image, $price, $ingredients, $weight)
     {
-        parent::__construct($title, $image, $price);
+        parent::__construct($type, $title, $image, $price);
         $this->setIngredients($ingredients);
         $this->setWeight($weight);
     }
@@ -41,7 +41,7 @@ class Food extends Product
     }
 }
 
-$first_product = new Food('Royal Canin Mini Adult', 'https://arcaplanet.vtexassets.com/arquivos/ids/243820/royal-canin-size-cane-mini-adult.jpg', 43.99, ["prosciutto", "riso"], 545);
-$second_product = new Food('Almo Nature Holistic Maintenance Medium Large Tonno e Riso', 'https://arcaplanet.vtexassets.com/arquivos/ids/245173/almo-nature-holistic-cane-adult-medium-pollo-e-riso.jpg', 44.99, ["manzo", "cereali"], 600);
-$third_product = new Food('Almo Nature Cat Daily Lattina', 'https://arcaplanet.vtexassets.com/arquivos/ids/245336/almo-daily-menu-cat-400-gr-vitello.jpg', 34.99, ["tonno", "pollo", "prosciutto"], 400);
-$fourth_product = new Food('Mangime per Pesci Guppy in Fiocchi', 'https://arcaplanet.vtexassets.com/arquivos/ids/272714/tetra-guppy-mini-flakes.jpg', 2.95, ["pesi e sottoprodotti dei pesci", "cereali", "lieviti", "alghe"], 400);
+$first_product = new Food("Cane", 'Royal Canin Mini Adult', 'https://th.bing.com/th/id/OIP.C3zzw1OWmJVUd4Xde8jCQgHaHa?w=201&h=202&c=7&r=0&o=5&dpr=1.5&pid=1.7', 43.99, ["prosciutto", "riso"], 545);
+$second_product = new Food("Cane", 'Almo Nature Holistic Maintenance Medium Large Tonno e Riso', 'https://arcaplanet.vtexassets.com/arquivos/ids/245173/almo-nature-holistic-cane-adult-medium-pollo-e-riso.jpg', 44.99, ["manzo", "cereali"], 600);
+$third_product = new Food("Gatto", 'Almo Nature Cat Daily Lattina', 'https://arcaplanet.vtexassets.com/arquivos/ids/245336/almo-daily-menu-cat-400-gr-vitello.jpg', 34.99, ["tonno", "pollo", "prosciutto"], 400);
+$fourth_product = new Food("Pesce", 'Mangime per Pesci Guppy in Fiocchi', 'https://arcaplanet.vtexassets.com/arquivos/ids/272714/tetra-guppy-mini-flakes.jpg', 2.95, ["pesi e sottoprodotti dei pesci", "cereali", "lieviti", "alghe"], 400);

@@ -7,9 +7,9 @@ class Toy extends Product
     protected $characteristics;
     protected $size;
 
-    public function __construct($title, $image, $price, $characteristics, $size = "ND")
+    public function __construct($type, $title, $image, $price, $characteristics, $size = "ND")
     {
-        parent::__construct($title, $image, $price);
+        parent::__construct($type, $title, $image, $price);
         $this->setCharacteristics($characteristics);
         $this->setSize($size);
     }
@@ -37,5 +37,5 @@ class Toy extends Product
     }
 }
 
-$seventh_product = new Toy('Kong Classic', 'https://arcaplanet.vtexassets.com/arquivos/ids/256599/kong-classic1.jpg', 13.49, "Galleggia e rimbalza", "8,5 cm x 10 cm");
-$eighth_product = new Toy('Topini di peluche Trixie', 'https://arcaplanet.vtexassets.com/arquivos/ids/223852/trixie-gatto-gioco-active-mouse-peluche.jpg', 4.99, "Morbido con codina in corda", "8,5 cm x 10 cm");
+$seventh_product = new Toy("Cane", 'Kong Classic', 'https://arcaplanet.vtexassets.com/arquivos/ids/256599/kong-classic1.jpg', 13.49, "Galleggia e rimbalza", "8,5 cm x 10 cm");
+$eighth_product = new Toy("Gatto", 'Topini di peluche Trixie', 'https://arcaplanet.vtexassets.com/arquivos/ids/223852/trixie-gatto-gioco-active-mouse-peluche.jpg', 4.99, "Morbido con codina in corda", "8,5 cm x 10 cm");
