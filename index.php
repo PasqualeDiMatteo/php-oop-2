@@ -1,8 +1,8 @@
 <?php
-require_once __DIR__ . "/e-commerce.php";
-require_once __DIR__ . "/product.php";
-require_once __DIR__ . "/food.php";
-require_once __DIR__ . "/accessory.php";
+require_once __DIR__ . "/models/e-commerce.php";
+require_once __DIR__ . "/models/product.php";
+require_once __DIR__ . "/models/food.php";
+require_once __DIR__ . "/models/accessory.php";
 ?>
 
 <!DOCTYPE html>
